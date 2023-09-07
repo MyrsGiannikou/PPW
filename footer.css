@@ -1,0 +1,96 @@
+/*FOOTER uguale per ogni file html*/
+.footer
+{
+    margin-top: 5%;
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    background:  rgba(255, 255, 255, 0.719);
+}
+.logoUnipi
+{
+    height: 55px;
+    width: 50px;  
+    margin-top: 0.5%;
+}
+.footer p
+{
+    white-space: nowrap;
+
+    font-size: 20px;
+    color: #c37039;
+}
+.W3S
+{
+    margin-top: 1%;
+    margin-left: -9%;
+    width: 80px;
+    height: 25px;
+}
+.gitHub
+{  
+    margin-top: 0.5%;
+}
+.gitHub img
+{
+    height: 55px;
+    width: 50px;
+    margin-top: 0.5%;
+    
+    border-radius: 50%;
+}
+.gitHub img:hover 
+{
+    box-shadow: 0 0 3px 5px #c37039d4;
+}
+
+/******************************MEDIA QUERIES****************************/
+@media screen and (max-width: 1300px)
+{
+    .W3S
+    {
+        margin-top: 2%;
+        margin-left: 0%;
+    }
+}
+@media screen and (max-width: 900px)
+{
+    .FootP
+    {
+        font-size: 17px;
+        margin-top: 3%;
+    }
+    .logoUnipi, .gitHub img
+    {
+        height: 50px;
+        width: 45px;
+    }
+    .logoUnipi, .gitHub
+    {
+        
+        margin-top: 1.5%;
+    }
+    .W3S
+    {
+        margin-top: 3%;
+    }
+}
+@media screen and (max-width: 850px)
+{
+    .FootP 
+    {
+        display: none;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .W3S
+    {
+        margin-top: 5%;
+    }
+}

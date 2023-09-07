@@ -1,0 +1,786 @@
+/**********************GENERAL**********************/
+body
+{
+    background-color: #f3a46fd1;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.Main-Index, .Main-Basics, .Main-Ideas, .Main-About
+{
+    margin-top: 7%;
+    margin-left: 10%;
+    width: 80%;
+}
+.Par1-Index, .Par1-Basics, .Par1-Ideas, .Par1-About, 
+.Par2-Index, .Par2-Basics, .Par2-Ideas, .Par2-About,
+.Par3-Basics, .Par3-About
+{
+    padding: 2%;
+    margin-top: 2%;
+
+    text-align: center;
+    font-size: 18px;
+    color: #934d1e;
+
+    border-radius: 25px;
+    background-color: #fbf7f5c2; 
+    box-shadow: 10px 5px #c37039a8;   
+}
+.Par1-Index:hover,.Par1-Basics:hover, .Par1-Ideas:hover, .Par1-About:hover,
+.Par2-Index:hover, .Par2-Basics:hover, .Par2-Ideas:hover, .Par2-About:hover, 
+.Par3-Basics:hover, .Par3-About:hover
+{
+    transform: scaleX(1.007);
+    transition: transform 330ms ease-in-out;
+}
+
+/**********************INDEX**********************/
+.Par2-Index
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 600px;
+}  
+.Par2-Index span
+{
+    margin-left: 7%;
+}
+.Timeline 
+{
+    margin: 20px;
+    margin-left: 3%;
+    padding: 20px;
+    width: 90%;
+    border-radius: 25px;
+
+    background: #fbf7f5c2;
+    box-shadow: 10px 5px #c37039a8;
+  
+}
+.Timeline:hover
+{
+    box-shadow: 5px 5px 10px 7px #fffcfc;    
+}
+.card
+{
+    position: relative;
+    width: 90%;
+}
+
+/* padding delle cards */
+.card:nth-child(odd) 
+{
+    padding: 60px 70px 60px 30px;
+}
+.card:nth-child(even)
+{
+    padding: 60px 30px 60px 20px;
+}
+
+/*border*/
+.card::before
+{
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid #c37039;
+}
+/*border of sopra, sotto e sx */
+.card:nth-child(odd)::before
+{
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
+}
+/*border of sopra, sotto e dx */
+.card:nth-child(even)::before 
+{
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
+}
+/*Tolgo il border al primo figlio*/
+.card:first-child::before 
+{
+    border-top: 0;
+    border-top-left-radius: 0;
+}
+/*Tolgo il figlio allultimo figlio */
+.card:last-child::before 
+{
+    border-bottom: 0;
+    border-top-left-radius: 7px;
+}
+.info
+{
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.719);
+    color: #934d1e;
+    border-radius: 10px;
+    padding: 10px;
+}
+/*Titolo delle carte */
+.title 
+{
+    color: #c37039;
+    position: relative;
+    margin-bottom: 0%;
+}
+  
+/*Puntino*/
+.title::before 
+{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 3px solid #c37039a8;
+}
+  
+/*Allineo test alla dx se la carta e' pari */
+.card:nth-child(even) > .info > .title
+{
+    text-align: right;
+    margin-right: 100px;
+}
+/*Allineo testo a sx de carta e' dispari*/
+.card:nth-child(odd) > .info > .title
+{
+    text-align: left;
+    margin-left: 100px;
+}
+/* allineo pallino sul border dx se la carta e dispari */
+.card:nth-child(odd) > .info > .title::before
+{
+    left: -145px;
+}
+  
+/*allineo il pallino alla sx de la carta e pari*/
+.card:nth-child(even) > .info > .title::before 
+{
+    right: -145px;
+}
+  
+/**********************BASICS**********************/
+/*tabella*/
+.table
+{
+    padding: 1%;
+    
+    margin-left: 5%;
+    margin-right: 5%;
+    
+    width: 90%;
+    border-spacing: 18px;
+    
+    border-radius: 25px;
+    color: #934d1e;
+    background-color: #fbf7f5c2; 
+    box-shadow: 10px 5px #c37039a8;
+
+}
+.table:hover
+{
+    box-shadow: 5px 5px 10px 7px #fffcfc;    
+}
+.table th, .table td 
+{
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 10px 5px #ee7e3375;    
+}
+.table th 
+{
+    background-color: #ffffff6b;
+}
+.table td
+{
+    font-size: 18px;
+}
+.table td:hover 
+{
+    transform: scaleY(1.15);
+    transition: transform 330ms;
+}
+.table th
+{
+    font-size: 20px;
+    white-space: nowrap;
+    color: #934d1e;
+}
+/*cambio colore alle caselle pari*/
+.table tr:nth-child(even) 
+{
+    background-color: #f9f9f9;
+}
+
+/* mappa */
+.Par3-Basics
+{
+    height: 700px; 
+    padding-bottom: 10%;
+}
+.MapSection
+{
+    display: flex;
+    flex-direction: row;
+}
+.Map-Image
+{        
+    display: block;
+    margin-top: 5%;
+    margin-left: 10%;
+    border-radius: 25px;
+ 
+} 
+.Map-Image:hover 
+{
+    box-shadow: 0 0 5px 5px #12a8f3ae; 
+}   
+.MapDetails
+{
+    padding: 2%;
+    padding-left: 10%;
+    border-radius: 25px;
+}
+
+/**********************IDEAS**********************/
+.loader 
+{
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #c37039; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+
+    margin-top: 10%;
+    margin-left: 45% ;
+}
+  
+@keyframes spin 
+{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*galleria di foto e video*/
+.Par2-Ideas
+{
+    height: 600px;
+} 
+.content
+{
+    display: none;
+}  
+.GalleryContainer
+{
+    margin-left: -50%; 
+    margin-top: 3%; 
+}
+.GalleryContainer img
+{
+    width: 25%;
+    height: 500px;
+    border-radius: 25px;
+    border: solid 3px #c37039;
+    box-shadow: 10px 7px #c37039a8;
+    
+}
+.Dx
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: -30%;
+    margin-left: 50%;
+}
+.VideosGallery iframe
+{
+    width: 80%;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px 7px #c37039a0;     
+}
+iframe:hover
+{
+    box-shadow: 5px 5px 10px 7px #ffffffa0;     
+}
+.GalleryPic, .GalleryVideo
+{
+    display: none;
+}  
+.GalleryActions
+{
+    margin-top: 5%;
+}
+input, button
+{
+    background-color: #c37039;
+    color: whitesmoke;
+    box-shadow: 3px 3px #c37039a8;
+    font-size: 20px;
+    border-radius: 50%;
+    
+    cursor: pointer;
+}
+button
+{
+    padding: 2% 2%;
+}
+input
+{
+    padding: 3% 2%;
+} 
+button:hover, input:hover
+{
+    position: relative;
+    top: -4px;
+}
+
+
+/**********************ABOUT**********************/
+
+.LinkSewMac, .LinkSewKit
+{
+    height: 200px;
+    padding: 2%;
+    border: dashed 5px #c37039d4;
+}
+.LinkSewMac
+{
+    margin-left: -30%;
+}
+.LinkSewKit
+{
+    margin-right: -30%;
+}
+.LinkSewMac:hover, .LinkSewKit:hover
+{
+    transform: scaleY(1.05);
+    transition: transform 0.1s;
+    border: dashed 5px #ffffff;
+}
+.Par3-About a:link
+{
+    text-decoration: none;
+}
+.Par3-About a:visited
+{   
+    text-decoration: none;
+}
+.Par3-About a:hover
+{
+    color: #ffffff;
+}
+
+/**********************QUERIES**********************/
+
+@media screen and (max-width: 1700px)
+{
+    .Dx
+    {
+        margin-top: -35%;
+    }
+}
+@media screen and (max-width: 1550px)
+{
+    .Main-Index, .Main-Basics, .Main-Ideas, .Main-About
+    {
+        margin-top: 8%;
+    }    
+}
+@media screen and (max-width: 1500px)
+{
+    .Map-Image
+    {
+        margin-top: 10%;
+    } 
+    .GalleryContainer img
+    {
+        height: 400px;
+    }
+    .GalleryContainer img
+    {
+        margin-top: 3%;
+    }
+} 
+@media screen and (max-width: 1400px)
+{
+    .Map-Image
+    {
+        margin-left: 3%;
+    }
+    .MapDetails p
+    {
+        margin-top: -5%;
+    }
+    .MapDetails
+    {
+        margin-left: -5%;
+    }
+
+    .GalleryContainer img
+    {
+        margin-left: 0%;
+    }
+    .Dx
+    {
+        margin-left: 50%;
+    }
+}
+@media screen and (max-width: 1270px)
+{
+    .Main-Index, .Main-Basics, .Main-Ideas, .Main-About
+    {
+        margin-top: 10%;
+    } 
+}
+@media screen and (max-width: 1270px)
+{
+    
+    .Main-Index, .Main-Basics, .Main-Ideas, .Main-About
+    {
+        margin-left: 5%;
+        width: 90%;
+    }  
+}
+
+@media screen and (max-width: 1130px)
+{
+    .Par3-Basics
+    {
+        height: 600px;
+    }
+    .Map-Image
+    {
+        width: 450px;
+    }
+
+    .Par2-Ideas
+    {
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 600px;
+    }  
+    .loader
+    {
+        margin-top: 20%;
+    }
+    .Dx
+    {
+        flex-direction: column-reverse;
+        margin-top: -2%;
+        margin-left: 0%;
+    }
+    .VideosGallery iframe
+    {
+        margin-top: 2%;
+    }
+    .GalleryContainer
+    {
+        margin-left: 0%;
+        margin-top: 0%;
+    }
+    .GalleryContainer img
+    {
+
+        width: 50%;
+        height: 450px;
+    }
+}
+@media screen and (max-width: 1100px)
+{
+    .Par3-Basics
+    {
+        height: 1100px;
+        padding-bottom: 3%;
+    } 
+    .MapSection
+    {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .Map-Image
+    {
+        margin-top: 5%;
+        margin-left: 15%; 
+        width: 70%;
+    }
+}
+@media screen and (max-width: 900px)
+{
+    .Main-Index, .Main-Basics, .Main-Ideas, .Main-About
+    {
+        margin-top: 10%;
+    }   
+    
+    .Timeline
+    {
+        padding: 10px;
+    }
+    .card:nth-child(odd) 
+    {
+        padding: 50px 60px 50px 20px;
+    }
+    .card:nth-child(even)
+    {
+        padding: 50px 20px 50px 10px;
+    }
+    
+.card:nth-child(odd) > .info > .title
+{
+    margin-left: 110px;
+}
+    .card:nth-child(even) > .info > .title::before 
+    {
+        right: -135px;
+    }
+    
+    .card:nth-child(odd)::before
+    {       
+        top: 20px;
+        bottom: -5px;
+    }
+    .card:nth-child(even)::before 
+    {
+        top: 0;
+        bottom: -25px;
+    }
+    .card:first-child::before 
+    {
+        border-top-left-radius: 7px;
+    }
+    .card:last-child::before 
+    {
+        bottom: 10px;
+        border-bottom-right-radius: 7px;
+    }
+    .GalleryContainer img
+    {
+        width: 70%;
+        height: 500px;
+    }
+}
+@media screen and (max-width: 750px)
+{  
+    .card:nth-child(even) > .info > .title
+    {
+        text-align: center; 
+        margin-left: 15vw; 
+        white-space: nowrap;
+    } 
+    .card:nth-child(odd) > .info > .title
+    {
+        text-align: center; 
+        margin-right: 15vw; 
+        white-space: nowrap;
+    } 
+    .table th 
+    {
+        white-space: pre-line;
+    } 
+    .table th, .table td 
+    {
+        padding: 5px;
+    }
+    .table td:hover 
+    {
+        transform:none;
+    }
+    .loader
+    {
+        margin-top: 30%;
+        margin-left: 40%;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    .Main-Index, .Main-Basics, .Main-Ideas, .Main-About
+    {
+        margin-top: 12%;
+    }    
+    .Par1-Index, .Par1-Basics, .Par1-Ideas, .Par1-About, 
+    .Par2-Index, .Par2-Basics, .Par2-Ideas, .Par2-About,
+    .Par3-Basics, .Par3-About
+    {
+        font-size: 16px;
+    }
+
+    .card:nth-child(odd) 
+    {
+        padding: 30px 20px 20px 20px;
+    }
+    .card:nth-child(even)
+    {
+        padding: 25px 20px 25px 15px;
+    }
+
+    .card:nth-child(odd)::before
+    {
+        top: 10px;
+    }
+    .card:nth-child(even)::before
+    {
+        bottom: -15px;
+    } 
+    .card:last-child::before 
+    {
+        bottom: 20px;
+    }
+
+    .table
+    { 
+        border-spacing: 13px; 
+    }
+    .table td
+    {
+        font-size: 15px;
+    }
+    .table tr:nth-child(1)
+    {
+        font-size: 18px;
+    }
+    
+    .Par3-Basics
+    {   
+        height: 900px;
+        padding-bottom: 20%;
+    }
+    .Map-Image
+    {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+
+    .GalleryContainer img
+    {
+        width: 80%;
+        height: 400px;
+    }
+
+    .LinkSewMac, .LinkSewKit
+    {
+        height: 150px;
+        width: 150px;
+    }
+    .LinkSewMac
+    {
+        margin-right: 5%;
+        margin-left: 0%;
+    }
+    .LinkSewKit
+    {
+        margin-right: 0%
+    }
+
+}
+@media screen and (max-width: 500px)
+{   
+    .card:nth-child(even) > .info > .title, 
+    .card:nth-child(odd) > .info > .title
+    {
+        white-space: normal;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .Main-Index, .Main-Basics, .Main-Ideas, .Main-About
+    {
+        margin-top: 18%;
+    }   
+    .table
+    {
+        margin-left: 2%;
+        width: 95%;
+        box-shadow: 5px 2px #c37039a8;
+        border-spacing: 7px;
+    }
+    .table th, .table td 
+    {
+        box-shadow: 5px 3px #ee7e3375; 
+    }
+    .table th
+    {
+        font-size: 15px;
+    }
+    
+    .Par3-Basics
+    {
+        height: 950px;
+    }
+
+    .loader
+    {
+        margin-top: 40%;
+        margin-left: 30%;
+    }
+    .GalleryContainer img
+    {
+        height: 300px;
+    }
+
+
+    .LinkSewMac, .LinkSewKit
+    {
+        height: 100px;
+        width: 100px;
+    }
+    
+}
+@media screen and (max-width: 400px)
+{
+
+    .Timeline
+    {
+        box-shadow: none;
+    }
+    .Par3-Basics
+    {
+        padding-bottom: 30%;
+    }
+    .MapDetails p 
+    {
+        margin-top: -10%;
+    }
+}
+@media screen and (max-width: 345px)
+{
+    .table
+    {
+        border-spacing: 5px;
+        box-shadow: none;
+    }
+    .table th, .table td 
+    {
+        padding: 0.75%;
+    }
+    .Par3-Basics
+    {
+        height: 1000px;
+    }
+}
+@media screen and (max-width: 325px)
+{
+
+    .Par3-Basics
+    {
+        padding-bottom: 50%;
+    }
+}
+@media screen and (max-width: 320px)
+{
+    .title
+    {
+        font-size: 16px;
+    }
+}
